@@ -1,0 +1,11 @@
+# Robots.txt for RichardSenko.com
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /xmlrpc.php
+Disallow: /?s=        # zabráni indexácii vyhľadávacích výsledkov
+Disallow: /search/    # alternatívne podľa URL štruktúry
+Allow: /wp-admin/admin-ajax.php
+
+# Sitemap for better crawling
+Sitemap: https://www.richardsenko.com/sitemap_index.xml
