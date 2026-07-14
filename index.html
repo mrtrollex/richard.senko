@@ -127,22 +127,30 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<style id="static-contact-styles">
 		html { scroll-behavior: smooth; }
 		#kontakt { scroll-margin-top: 90px; }
-		.static-contact-section { padding: 100px 40px; background: #fff; }
-		.static-contact-inner { width: 100%; max-width: 1200px; margin: 0 auto; }
-		.static-contact-section h2 { margin: 0 0 40px; color: #000; font-size: 48px; }
-		.static-contact-form { max-width: 760px; }
+		.static-contact-section { position: relative; overflow: hidden; padding: 104px 40px; background: linear-gradient(135deg, #fbf8f0 0%, #f4eddd 100%); border-top: 1px solid rgba(198, 146, 47, .3); }
+		.static-contact-section::before { position: absolute; top: -140px; right: -100px; width: 360px; height: 360px; content: ""; border: 1px solid rgba(198, 146, 47, .18); border-radius: 50%; box-shadow: 0 0 0 42px rgba(198, 146, 47, .05), 0 0 0 84px rgba(198, 146, 47, .035); pointer-events: none; }
+		.static-contact-inner { position: relative; width: 100%; max-width: 1040px; margin: 0 auto; }
+		.static-contact-kicker { margin: 0 0 12px; color: #b57e1f; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+		.static-contact-section h2 { margin: 0 0 12px; color: #211a12; font-size: 48px; }
+		.static-contact-intro { max-width: 620px; margin: 0 0 36px; color: #6f6558; font-size: 18px; }
+		.static-contact-form { max-width: 820px; padding: 40px; background: rgba(255, 255, 255, .82); border: 1px solid rgba(181, 126, 31, .28); border-top: 4px solid #c6922f; box-shadow: 0 18px 50px rgba(74, 52, 20, .09); }
+		.static-contact-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 		.static-contact-field { margin-bottom: 20px; }
-		.static-contact-field label { display: block; margin-bottom: 8px; color: #000; font-weight: 600; }
+		.static-contact-field label { display: block; margin-bottom: 8px; color: #403522; font-weight: 600; }
 		.static-contact-field input,
-		.static-contact-field textarea { width: 100%; padding: 14px 16px; color: #000; background: #fff; border: 1px solid #e0e0e0; border-radius: 0; box-sizing: border-box; }
+		.static-contact-field textarea { width: 100%; padding: 14px 16px; color: #211a12; background: #fffdf8; border: 1px solid #d9cfbd; border-radius: 0; box-sizing: border-box; transition: border-color .2s ease, box-shadow .2s ease; }
+		.static-contact-field input:focus,
+		.static-contact-field textarea:focus { border-color: #c6922f; outline: none; box-shadow: 0 0 0 3px rgba(198, 146, 47, .14); }
 		.static-contact-field textarea { min-height: 180px; resize: vertical; }
-		.static-contact-submit { padding: 16px 28px; color: #fff; background: #000; border: 0; border-radius: 0; font-weight: 600; text-transform: uppercase; cursor: pointer; }
+		.static-contact-submit { padding: 16px 28px; color: #211a12; background: #d5a13e; border: 1px solid #d5a13e; border-radius: 0; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; transition: background .2s ease, color .2s ease, transform .2s ease; }
 		.static-contact-submit:hover,
-		.static-contact-submit:focus { color: #fff; background: #ffb100; }
-		.static-contact-note { margin-top: 14px; color: #666; font-size: 14px; }
+		.static-contact-submit:focus { color: #fff; background: #211a12; border-color: #211a12; transform: translateY(-1px); }
+		.static-contact-note { margin: 16px 0 0; color: #817767; font-size: 14px; }
 		@media (max-width: 767px) {
 			.static-contact-section { padding: 64px 24px; }
 			.static-contact-section h2 { font-size: 40px; }
+			.static-contact-form { padding: 28px 22px; }
+			.static-contact-row { grid-template-columns: 1fr; gap: 0; }
 		}
 	</style>
 </head>
@@ -660,15 +668,19 @@ Beyond coding, I’m passionate about biohacking, performance, and personal grow
 		</section>
 		<section id="kontakt" class="static-contact-section" aria-labelledby="contact-heading">
 			<div class="static-contact-inner">
+				<p class="static-contact-kicker">Get in touch</p>
 				<h2 id="contact-heading">Contact me</h2>
+				<p class="static-contact-intro">Have a project or an idea in mind? Send me a message and let’s talk.</p>
 				<form class="static-contact-form" action="mailto:richard.senko@apex-solutions.cz" method="post" enctype="text/plain">
-					<div class="static-contact-field">
-						<label for="contact-email">Email</label>
-						<input id="contact-email" name="Email" type="email" autocomplete="email" required>
-					</div>
-					<div class="static-contact-field">
-						<label for="contact-subject">Subject</label>
-						<input id="contact-subject" name="Subject" type="text" required>
+					<div class="static-contact-row">
+						<div class="static-contact-field">
+							<label for="contact-email">Email</label>
+							<input id="contact-email" name="Email" type="email" autocomplete="email" required>
+						</div>
+						<div class="static-contact-field">
+							<label for="contact-subject">Subject</label>
+							<input id="contact-subject" name="Subject" type="text" required>
+						</div>
 					</div>
 					<div class="static-contact-field">
 						<label for="contact-message">Message</label>
