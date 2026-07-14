@@ -124,6 +124,27 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   }
 }
 </style>
+	<style id="static-contact-styles">
+		html { scroll-behavior: smooth; }
+		#kontakt { scroll-margin-top: 90px; }
+		.static-contact-section { padding: 100px 40px; background: #fff; }
+		.static-contact-inner { width: 100%; max-width: 1200px; margin: 0 auto; }
+		.static-contact-section h2 { margin: 0 0 40px; color: #000; font-size: 48px; }
+		.static-contact-form { max-width: 760px; }
+		.static-contact-field { margin-bottom: 20px; }
+		.static-contact-field label { display: block; margin-bottom: 8px; color: #000; font-weight: 600; }
+		.static-contact-field input,
+		.static-contact-field textarea { width: 100%; padding: 14px 16px; color: #000; background: #fff; border: 1px solid #e0e0e0; border-radius: 0; box-sizing: border-box; }
+		.static-contact-field textarea { min-height: 180px; resize: vertical; }
+		.static-contact-submit { padding: 16px 28px; color: #fff; background: #000; border: 0; border-radius: 0; font-weight: 600; text-transform: uppercase; cursor: pointer; }
+		.static-contact-submit:hover,
+		.static-contact-submit:focus { color: #fff; background: #ffb100; }
+		.static-contact-note { margin-top: 14px; color: #666; font-size: 14px; }
+		@media (max-width: 767px) {
+			.static-contact-section { padding: 64px 24px; }
+			.static-contact-section h2 { font-size: 40px; }
+		}
+	</style>
 </head>
 
 <body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="home wp-singular page-template page-template-elementor_theme page page-id-6 wp-custom-logo wp-embed-responsive wp-theme-astra eio-default ehf-template-astra ehf-stylesheet-astra ally-default ast-desktop ast-page-builder-template ast-no-sidebar astra-4.13.6 ast-single-post ast-mobile-inherit-site-logo ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header ast-full-width-primary-header elementor-default elementor-kit-697 elementor-page elementor-page-6">
@@ -148,16 +169,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			<!-- .site-branding -->
 					</div>
 				<div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
-			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-desktop" aria-label="Primary Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border inline-on-mobile"><li id="menu-item-1509" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1509"><a href="/kontakt/" class="menu-link">Contact</a></li>
+			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-desktop" aria-label="Primary Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border inline-on-mobile">
 </ul></div></nav></div></div>		</div>
 								</div>
 																								<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
 										<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="section-hb-social-icons-1">
 			<div class="ast-header-social-1-wrap ast-header-social-wrap"><div class="header-social-inner-wrap element-social-inner-wrap social-show-label-false ast-social-color-type-custom ast-social-stack-none ast-social-element-style-filled"><a href="https://www.linkedin.com/in/richard-senko/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="--color: #7acdee; --background-color: transparent;" class="ast-builder-social-element ast-inline-flex ast-twitter header-social-item"><span aria-hidden="true" class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></span></a></div></div>		</div>
 				<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
-			<div class="ast-builder-button-wrap ast-builder-button-size-"><a class="ast-custom-button-link" href="/kontakt/" target="_self" role="button" aria-label="Get in touch">
+			<div class="ast-builder-button-wrap ast-builder-button-size-"><a class="ast-custom-button-link" href="#kontakt" target="_self" role="button" aria-label="Get in touch">
 				<div class="ast-custom-button">Get in touch</div>
-			</a><a class="menu-link" href="/kontakt/" target="_self">Get in touch</a></div>		</div>
+			</a><a class="menu-link" href="#kontakt" target="_self">Get in touch</a></div>		</div>
 									</div>
 												</div>
 					</div>
@@ -181,9 +202,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 									</div>
 																			<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
 										<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
-			<div class="ast-builder-button-wrap ast-builder-button-size-"><a class="ast-custom-button-link" href="/kontakt/" target="_self" role="button" aria-label="Get in touch">
+			<div class="ast-builder-button-wrap ast-builder-button-size-"><a class="ast-custom-button-link" href="#kontakt" target="_self" role="button" aria-label="Get in touch">
 				<div class="ast-custom-button">Get in touch</div>
-			</a><a class="menu-link" href="/kontakt/" target="_self">Get in touch</a></div>		</div>
+			</a><a class="menu-link" href="#kontakt" target="_self">Get in touch</a></div>		</div>
 									</div>
 											</div>
 						</div>
@@ -636,6 +657,27 @@ Beyond coding, I’m passionate about biohacking, performance, and personal grow
 					</div>
 		</div>
 					</div>
+		</section>
+		<section id="kontakt" class="static-contact-section" aria-labelledby="contact-heading">
+			<div class="static-contact-inner">
+				<h2 id="contact-heading">Contact me</h2>
+				<form class="static-contact-form" action="mailto:richard.senko@apex-solutions.cz" method="post" enctype="text/plain">
+					<div class="static-contact-field">
+						<label for="contact-email">Email</label>
+						<input id="contact-email" name="Email" type="email" autocomplete="email" required>
+					</div>
+					<div class="static-contact-field">
+						<label for="contact-subject">Subject</label>
+						<input id="contact-subject" name="Subject" type="text" required>
+					</div>
+					<div class="static-contact-field">
+						<label for="contact-message">Message</label>
+						<textarea id="contact-message" name="Message" required></textarea>
+					</div>
+					<button class="static-contact-submit" type="submit">Send message</button>
+					<p class="static-contact-note">Sending opens your email application with the message filled in.</p>
+				</form>
+			</div>
 		</section>
 				</div>
 
