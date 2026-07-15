@@ -1,0 +1,21 @@
+{
+  "name": "richardsenko-static-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:site": "node scripts/check-site.mjs",
+    "validate:html": "html-validate index.html kontakt/index.html richard-senko-en/index.html 404.html",
+    "test": "playwright test",
+    "test:axe": "playwright test --grep @axe",
+    "test:smoke": "playwright test --grep-invert @axe",
+    "lighthouse": "lhci autorun",
+    "serve": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.55.0",
+    "html-validate": "^10.4.0",
+    "parse5": "^7.3.0"
+  }
+}

@@ -1,0 +1,48 @@
+name: Site quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check broken internal links and missing local resources
+        run: npm run check:site
+      - name: Validate HTML
+        run: npm run validate:html
+
+  browser-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Playwright smoke tests at required viewports
+        run: npm run test:smoke
+      - name: axe accessibility tests
+        run: npm run test:axe
+      - name: Lighthouse CI
+        run: npm run lighthouse
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-test-artifacts
+          path: |
+            playwright-report/
+            test-results/
